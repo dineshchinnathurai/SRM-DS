@@ -1,3 +1,4 @@
+
 // LongestIncreasingSubsequence 
 import java.util.Scanner;
 
@@ -14,21 +15,21 @@ public class LongestIncreasingSubsequence {
 
         System.out.println("Enter array elements:");
 
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
 
         int[] dp = new int[n];
 
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             dp[i] = 1;
         }
 
-        for(int i = 1; i < n; i++) {
+        for (int i = 1; i < n; i++) {
 
-            for(int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++) {
 
-                if(arr[j] < arr[i]) {
+                if (arr[j] < arr[i]) {
                     dp[i] = Math.max(dp[i], dp[j] + 1);
                 }
             }
@@ -36,8 +37,8 @@ public class LongestIncreasingSubsequence {
 
         int maxLength = dp[0];
 
-        for(int i = 1; i < n; i++) {
-            if(dp[i] > maxLength) {
+        for (int i = 1; i < n; i++) {
+            if (dp[i] > maxLength) {
                 maxLength = dp[i];
             }
         }
@@ -49,3 +50,4 @@ public class LongestIncreasingSubsequence {
 }
 
 // my update
+// my update as colloborator
